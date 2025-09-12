@@ -1,3 +1,7 @@
+## 3.2.0
+
+- feat: add `pushRoot` to `navigationProvider` addon to replace the whole navigation stack
+
 ## 3.1.0
 
 - feat: allow use of `ref.watch(reduxNotifier.provider!)` (access provider via notifier)

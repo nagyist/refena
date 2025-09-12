@@ -199,6 +199,8 @@ class _RefenaGraphPageState extends State<_RefenaGraphPage>
     // Set the initial transform and center the canvas
     final initialTransform =
         Transform.translate(offset: Offset(-w, -h)).transform;
+    // TODO: If we migrate, we would require 3.35+ which is too new.
+    // ignore: deprecated_member_use
     _controller.value = initialTransform.clone()..scale(_scale);
   }
 

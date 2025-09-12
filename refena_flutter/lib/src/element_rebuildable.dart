@@ -2,6 +2,8 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+// TODO: If we migrate, we would require 3.35+ which is too new.
+// ignore: unnecessary_import
 import 'package:meta/meta.dart';
 import 'package:refena/refena.dart';
 // ignore: implementation_imports
