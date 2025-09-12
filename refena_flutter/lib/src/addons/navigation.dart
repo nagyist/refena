@@ -41,6 +41,19 @@ class NavigationService {
     return result;
   }
 
+  /// Pushes a new route while removing all others.
+  Future<T?> pushRoot<T>(Widget widget) async {
+    final result = await _key.currentState?.pushAndRemoveUntil<T>(
+      MaterialPageRoute(
+        builder: (_) => widget,
+        settings: RouteSettings(name: widget.runtimeType.toString()),
+      ),
+      (route) => false,
+    );
+
+    return result;
+  }
+
   /// Pops the current route off the navigator.
   void pop([Object? result]) {
     _key.currentState?.pop(result);
@@ -59,6 +72,11 @@ class NavigateAction {
   static NavigationPushNamedAction<T> pushNamed<T>(String routeName,
       {Object? arguments}) {
     return NavigationPushNamedAction<T>._(routeName, arguments);
+  }
+
+  /// Pushes a new route while removing all others.
+  static NavigationPushRootAction<T> pushRoot<T>(Widget widget) {
+    return NavigationPushRootAction<T>._(widget);
   }
 
   /// Pops the current route off the navigator.
@@ -139,6 +157,33 @@ class NavigationPushNamedAction<R> extends BaseNavigationPushAction<R> {
   @override
   String toString() =>
       'NavigationPushNamedAction($_routeName, settings: $_arguments)';
+}
+
+class NavigationPushRootAction<R> extends BaseNavigationPushAction<R> {
+  final Widget _widget;
+
+  NavigationPushRootAction._(this._widget);
+
+  @override
+  Future<R?> navigate() {
+    return ref.read(navigationProvider).pushRoot<R>(_widget);
+  }
+
+  @override
+  String get debugLabel => 'NavigationPushRootAction(${_widget.runtimeType})';
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is NavigationPushRootAction<R> &&
+          runtimeType == other.runtimeType &&
+          _widget.runtimeType == other._widget.runtimeType;
+
+  @override
+  int get hashCode => _widget.hashCode;
+
+  @override
+  String toString() => 'NavigationPushRootAction(${_widget.runtimeType})';
 }
 
 /// Extend this class to create a custom pop action.
