@@ -1,3 +1,7 @@
+## 0.1.6
+
+- feat: add `exclude` parameter
+
 ## 0.1.5
 
 - deps: loosen `sentry` constraint to `>=7.0.0 <10.0.0`

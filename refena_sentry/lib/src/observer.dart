@@ -3,8 +3,20 @@ import 'package:sentry/sentry.dart';
 
 /// An observer that sends breadcrumbs to Sentry.
 class RefenaSentryObserver extends RefenaObserver {
+  /// If the given function returns `true`, then the event
+  /// won't be logged.
+  final bool Function(RefenaEvent event)? exclude;
+
+  RefenaSentryObserver({
+    this.exclude,
+  });
+
   @override
   void handleEvent(RefenaEvent event) {
+    if (exclude != null && exclude!(event)) {
+      return;
+    }
+
     switch (event) {
       case ActionDispatchedEvent():
         Sentry.addBreadcrumb(Breadcrumb(
