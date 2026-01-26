@@ -1,5 +1,7 @@
 <img src="https://codeberg.org/Tienisto/refena/raw/branch/main/resources/main-logo-2048.webp" height="100" alt="Logo" />
 
+**ARCHIVE NOTICE:** This repository has been archived. Follow development on [Codeberg](https://codeberg.org/Tienisto/refena).
+
 [![pub package](https://img.shields.io/pub/v/refena.svg)](https://pub.dev/packages/refena)
 ![ci](https://codeberg.org/Tienisto/refena/actions/workflows/ci.yml/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
