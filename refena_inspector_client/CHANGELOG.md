@@ -1,3 +1,7 @@
+## 2.1.1
+
+- chore: migrate from Github to Codeberg: https://codeberg.org/Tienisto/refena
+
 ## 2.1.0
 
 - deps: bump refena to 3.0.0

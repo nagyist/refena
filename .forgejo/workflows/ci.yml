@@ -8,19 +8,20 @@ on:
 
 env:
   FLUTTER_VERSION_OLDEST: "3.10.6"
-  FLUTTER_VERSION_NEWEST: "3.35.3"
+  FLUTTER_VERSION_NEWEST: "3.38.7"
 
 jobs:
   format:
     name: Format
-    runs-on: ubuntu-latest
+    runs-on: codeberg-small
 
     steps:
       - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2
+
+      - name: Setup Flutter
+        uses: ./.forgejo/actions/setup-flutter
         with:
           flutter-version: ${{ env.FLUTTER_VERSION_NEWEST }}
-          channel: "stable"
 
       - name: Dependencies (core)
         working-directory: refena
@@ -44,14 +45,15 @@ jobs:
 
   test:
     name: Test (newest Flutter version)
-    runs-on: ubuntu-latest
+    runs-on: codeberg-small
 
     steps:
       - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2
+
+      - name: Setup Flutter
+        uses: ./.forgejo/actions/setup-flutter
         with:
           flutter-version: ${{ env.FLUTTER_VERSION_NEWEST }}
-          channel: "stable"
 
       - name: Dependencies (core)
         working-directory: refena
@@ -83,14 +85,15 @@ jobs:
 
   test_legacy:
     name: Test (oldest Flutter version)
-    runs-on: ubuntu-latest
+    runs-on: codeberg-small
 
     steps:
       - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2
+
+      - name: Setup Flutter
+        uses: ./.forgejo/actions/setup-flutter
         with:
           flutter-version: ${{ env.FLUTTER_VERSION_OLDEST }}
-          channel: "stable"
 
 # the "test" package has invalid dependency constraints
 #      - name: Downgrade (core)

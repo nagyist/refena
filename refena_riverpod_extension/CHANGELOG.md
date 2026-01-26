@@ -1,3 +1,7 @@
+## 1.0.2
+
+- chore: migrate from Github to Codeberg: https://codeberg.org/Tienisto/refena
+
 ## 1.0.1
 
 - deps: loosen `refena` constraint to `>=1.0.0 <3.0.0`

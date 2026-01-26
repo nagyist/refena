@@ -1,3 +1,7 @@
+## 0.1.7
+
+- chore: migrate from Github to Codeberg: https://codeberg.org/Tienisto/refena
+
 ## 0.1.6
 
 - feat: add `exclude` parameter

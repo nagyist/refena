@@ -1,3 +1,7 @@
+## 3.2.1
+
+- chore: migrate from Github to Codeberg: https://codeberg.org/Tienisto/refena
+
 ## 3.2.0
 
 - feat: add `pushRoot` to `navigationProvider` addon to replace the whole navigation stack
