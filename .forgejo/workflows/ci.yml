@@ -11,8 +11,8 @@ env:
   FLUTTER_VERSION_NEWEST: "3.38.7"
 
 jobs:
-  format:
-    name: Format
+  test:
+    name: Test (newest Flutter version)
     runs-on: codeberg-small
 
     steps:
@@ -32,32 +32,6 @@ jobs:
       - name: Analyze (core)
         working-directory: refena
         run: flutter analyze
-
-      - name: Dependencies (flutter)
-        working-directory: refena_flutter
-        run: dart pub get
-      - name: Check format (flutter)
-        working-directory: refena_flutter
-        run: dart format --set-exit-if-changed lib bin test
-      - name: Analyze (flutter)
-        working-directory: refena_flutter
-        run: flutter analyze
-
-  test:
-    name: Test (newest Flutter version)
-    runs-on: codeberg-small
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Flutter
-        uses: ./.forgejo/actions/setup-flutter
-        with:
-          flutter-version: ${{ env.FLUTTER_VERSION_NEWEST }}
-
-      - name: Dependencies (core)
-        working-directory: refena
-        run: dart pub get
       - name: Test (core)
         working-directory: refena
         run: dart test
@@ -65,6 +39,12 @@ jobs:
       - name: Dependencies (flutter)
         working-directory: refena_flutter
         run: flutter pub get
+      - name: Check format (flutter)
+        working-directory: refena_flutter
+        run: dart format --set-exit-if-changed lib bin test
+      - name: Analyze (flutter)
+        working-directory: refena_flutter
+        run: flutter analyze
       - name: Test (flutter)
         working-directory: refena_flutter
         run: flutter test

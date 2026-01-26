@@ -1,6 +1,6 @@
 # Redux
 
-<img src="https://raw.githubusercontent.com/refena/refena/main/resources/redux-diagram.webp" style="width: 100%" alt="Redux Diagram" />
+<img src="https://codeberg.org/Tienisto/refena/raw/branch/main/resources/redux-diagram.webp" style="width: 100%" alt="Redux Diagram" />
 
 The state machine pattern is a powerful tool in software development to achieve a high degree of traceability.
 
@@ -648,4 +648,4 @@ They can be shown by opening the `RefenaTracingPage`:
 
 Here is what it looks like:
 
-![tracing-ui](https://raw.githubusercontent.com/refena/refena/main/resources/tracing-ui.png)
+![tracing-ui](https://codeberg.org/Tienisto/refena/raw/branch/main/resources/tracing-ui.png)

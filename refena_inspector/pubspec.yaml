@@ -1,8 +1,7 @@
 name: refena_inspector
 description: The inspector developer utility app for the Refena state management library.
-version: 2.1.0
-repository: https://github.com/refena/refena/tree/main/refena_inspector
-issue_tracker: https://github.com/refena/refena/issues
+version: 2.1.1
+repository: https://codeberg.org/Tienisto/refena/src/branch/main/refena_inspector
 topics:
   - refena
 screenshots:

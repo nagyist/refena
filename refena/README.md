@@ -1,7 +1,7 @@
-<img src="https://raw.githubusercontent.com/refena/refena/main/resources/main-logo-2048.webp" height="100" alt="Logo" />
+<img src="https://codeberg.org/Tienisto/refena/raw/branch/main/resources/main-logo-2048.webp" height="100" alt="Logo" />
 
 [![pub package](https://img.shields.io/pub/v/refena.svg)](https://pub.dev/packages/refena)
-![ci](https://github.com/refena/refena/actions/workflows/ci.yml/badge.svg)
+![ci](https://codeberg.org/Tienisto/refena/actions/workflows/ci.yml/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A state management library for Dart and Flutter.
@@ -90,7 +90,7 @@ Offering high traceability with [RefenaDebugObserver](#observer) and [RefenaTrac
 
 With a feature-rich [Refena Inspector](https://pub.dev/packages/refena_inspector):
 
-![inspector](https://raw.githubusercontent.com/refena/refena/main/resources/inspector-screenshot.webp)
+![inspector](https://codeberg.org/Tienisto/refena/raw/branch/main/resources/inspector-screenshot.webp)
 
 ## Table of Contents
 
@@ -669,7 +669,7 @@ build(BuildContext context) {
 
 ### ➤ ReduxProvider
 
-![redux-diagram](https://raw.githubusercontent.com/refena/refena/main/resources/redux-diagram.webp)
+![redux-diagram](https://codeberg.org/Tienisto/refena/raw/branch/main/resources/redux-diagram.webp)
 
 [Redux full documentation](https://pub.dev/documentation/refena/latest/topics/Redux-topic.html).
 
@@ -1639,7 +1639,7 @@ class MyPage extends StatelessWidget {
 
 Here is how it looks like:
 
-![tracing-ui](https://raw.githubusercontent.com/refena/refena/main/resources/tracing-ui.png)
+![tracing-ui](https://codeberg.org/Tienisto/refena/raw/branch/main/resources/tracing-ui.png)
 
 Side note:
 The `RefenaTracingObserver` itself is quite performant as events are added and removed with `O(1)` complexity.
@@ -1675,13 +1675,13 @@ class MyPage extends StatelessWidget {
 
 Here is how it looks like:
 
-![graph-ui](https://raw.githubusercontent.com/refena/refena/main/resources/graph-ui.webp)
+![graph-ui](https://codeberg.org/Tienisto/refena/raw/branch/main/resources/graph-ui.webp)
 
 ### ➤ Inspector
 
 Both the `RefenaTracingPage` and the `RefenaGraphPage` are included in the [Refena Inspector](https://pub.dev/packages/refena_inspector).
 
-![inspector](https://raw.githubusercontent.com/refena/refena/main/resources/inspector-screenshot.webp)
+![inspector](https://codeberg.org/Tienisto/refena/raw/branch/main/resources/inspector-screenshot.webp)
 
 ### ➤ Sentry
 
@@ -1689,7 +1689,7 @@ Use [refena_sentry](https://pub.dev/packages/refena_sentry) to add breadcrumbs t
 
 This is especially useful if you use Redux since you can see every action in Sentry.
 
-![sentry](https://raw.githubusercontent.com/refena/refena/main/resources/sentry.webp)
+![sentry](https://codeberg.org/Tienisto/refena/raw/branch/main/resources/sentry.webp)
 
 ## Testing
 

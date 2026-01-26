@@ -1,8 +1,7 @@
 name: refena_inspector_client
 description: The client for the inspector of the Refena state management library.
-version: 2.1.0
-repository: https://github.com/refena/refena/tree/main/refena_inspector_client
-issue_tracker: https://github.com/refena/refena/issues
+version: 2.1.1
+repository: https://codeberg.org/Tienisto/refena/src/branch/main/refena_inspector_client
 topics:
   - refena
 screenshots:
